@@ -5,7 +5,7 @@
 2. 编译客户端<br/>
 `cd go-ccmchain && make gccm`
 
-3. 初始化数据<br/> 
+3. 初始化数据(需要删除之前已经存在的)<br/> 
 `./build/bin/gccm init --datadir /data/datadir genesis.json`
 
 4. 后台启动客户端<br/>`nohup ./build/bin/gccm --gcmode archive --datadir /data/datadir --keystore /data/keystore --rpc --rpcapi db,ccm,net,web3,personal,admin,miner --txpool.lifetime 10m0s --rpcport 7575 --rpcaddr 0.0.0.0 --ipcpath /data/datadir/gccm.ipc --rpccorsdomain * &`
